@@ -1,0 +1,13 @@
+<h1> Edit your listing </h1>
+
+<%= simple_form_for @space do |f| %>
+<%= f.input :title %>
+<%= f.input :address %>
+<%= f.input :description %>
+<!-- Maybe have slider for adjusting amount? -->
+<%= f.input :half_hour_rate %>
+<!-- Needs to be boolean -->
+<%= f.input :availability, label: "Available" %>
+<%= f.submit %>
+<% end %>
+<!-- Need to include image upload eventually -->

@@ -1,0 +1,15 @@
+<h1> All available parking spaces </h1>
+
+<% @spaces.each do |space| %>
+  <% if space.availability %>
+    <!-- Need to include images eventually -->
+    <h3><%= space.title %></h3>
+    <p><%= space.address %></p>
+    <p><%= space.description %></p>
+    <p><%= space.half_hour_rate %></p>
+    <%= link_to "See more", space_path(space) %>
+    <!-- Or link the entire card with link_to nesting -->
+  <% end %>
+<% end %>
+
+<%= link_to "Add Listing", new_space_path %>

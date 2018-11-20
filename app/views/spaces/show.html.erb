@@ -1,0 +1,18 @@
+<h1> <%= @space.title %> </h1>
+
+<p><%= @space.address %></p>
+<p><%= @space.description %></p>
+<p><%= @space.half_hour_rate %></p>
+
+<!-- Need to include images eventually -->
+
+<!-- Need to add link to booking once route is known -->
+
+<!-- Or create a div with 'class=btn btn-primary' nested within link_to -->
+<%= link_to "Edit listing", edit_space_path(@space) %>
+<%= link_to space_path(@space),
+      method: :delete,
+      data: {confirm: "Are you sure?"} do %>
+      <p>Delete this listing</p>
+      <% end %>
+
