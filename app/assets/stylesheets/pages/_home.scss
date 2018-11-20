@@ -1,1 +1,14 @@
 // Specific CSS for your home-page
+
+.container {
+   display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.navbar-wagon {
+  z-index: 99;
+  position: absolute;
+  width: 100vw;
+}
