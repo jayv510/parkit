@@ -1,8 +1,19 @@
 <div class = "container">
   <%= render 'shared/navbar' %>
 
+
+
   <div class="home-banner" style= "background-image: url('<%= cl_image_path 'matt-jones-94160-unsplash.jpg' %>');">
      <h1><span id="banner-typed-text"></span></h1>
+
+     <div class = "form" >
+      <%= simple_form_for "" do |f| %>
+        <%= f.input :Where %>
+        <%= f.input :Startime%>
+        <%= f.input :Endtime %>
+        <%= f.submit "Find", class: "btn-park"  %>
+      <% end %>
+    </div>
   </div>
 
 </div>
