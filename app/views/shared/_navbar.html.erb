@@ -1,17 +1,19 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+    <img src="<%= cl_image_path("logovan.png")%>"
   <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
+  <%= link_to "List Your Space", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Help", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Sign Up", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Bookings", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
