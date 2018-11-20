@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
-  belongs_to :spaces
-  belongs_to :users
+  belongs_to :space
+  belongs_to :user
   has_many :reviews
   validates :start_datetime, presence: true
   validates :end_datetime, presence: true
