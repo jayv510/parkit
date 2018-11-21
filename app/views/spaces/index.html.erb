@@ -7,33 +7,32 @@
   <div class="card-container">
    <div class="row">
 
-      <% @spaces.each do |space| %>
-        <% if space.availability %>
-
-     <div class="col-xs-12 col-sm-6">
-       <figure class="card">
+    <% @spaces.each do |space| %>
+    <% if space.availability %>
+    <div class="col-xs-12 col-sm-6">
+     <figure class="card">
 
       <%= cl_image_tag("raban-haaijk-118657-unsplash.jpg") %>
-       <div class="rate"><span class="dollar"><%= space.half_hour_rate %></span><span class="thirty">/30min</span></div>
-       <figcaption>
-         <h3><%= space.title %></h3>
-         <p><%= space.address %></p>
-         <p><%= space.description %></p>
-       <%= link_to "", space_path(space) %>
-       </figcaption>
-        </figure>
-     </div>
-        <% end %>
-      <% end %>
-
+      <div class="rate"><span class="dollar"><%= space.half_hour_rate %></span><span class="thirty">/30min</span></div>
+      <figcaption>
+       <h3><%= space.title %></h3>
+       <p><%= space.address %></p>
+       <p><%= space.description %></p>
+       <%= link_to "See more", space_path(space) %>
+     </figcaption>
    </div>
-  </div>
+   <% end %>
+   <% end %>
 
- <div id="map-one"
- style="width: 50%;
- height: 600px;"
- data-markers="<%= @markers.to_json %>"
- data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"> </div>
+ </div>
+</div>
+
+<div id="map-one"
+style="width: 50%;
+height: 600px;"
+data-markers="<%= @markers.to_json %>"
+data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"> 
+</div>
 
 </div>
 
