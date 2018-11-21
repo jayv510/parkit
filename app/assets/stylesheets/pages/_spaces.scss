@@ -138,7 +138,26 @@ margin-left: 25px;
  padding-bottom: 0px;
 }
 
+
+.index-top {
+  padding-top: 5px;
+  padding-left: 25px;
+  }
+
+
+
 // Map
+
+#map-one {
+  display: flex;
+  flex: 0 0 450px;
+  height: 90vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+  padding-top: 20px;
+  margin: 0 50px;
+}
+
 
 #map {
   display: flex;
@@ -157,7 +176,7 @@ margin-left: 25px;
 
 .links {
   margin-top: -150px;
-  margin-left: px;
+  padding-left: 50px;
   text-decoration: none;
   color: black;
 
