@@ -26,6 +26,53 @@
   color: #D36656;
 }
 
+#title-login {
+  text-align: center;
+  padding-top: 85px;
+}
+
+#list {
+  text-align: center;
+  padding-top: 75px;
+}
+.form_two {
+  display: flex;
+  width: 320px;
+  height: 500px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color:#D36656;
+  box-shadow: 5px 2px 8px 2px rgba(0,0,0,0.73);
+  color: black;
+  margin-top: 20px;
+}
+
+.form_three {
+  display: flex;
+  width: 320px;
+  height: 300px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color:#D36656;
+  box-shadow: 5px 2px 8px 2px rgba(0,0,0,0.73);
+  color: black;
+  margin-top: -150px;
+
+}
+
+.form_four {
+  display: flex;
+  width: 320px;
+  height: 600px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color:#D36656;
+  box-shadow: 5px 2px 8px 2px rgba(0,0,0,0.73);
+  color: black;
+  margin-top: -180px;
+
+}
+
 .btn-park {
  color: black;
  padding: 10px 15px;

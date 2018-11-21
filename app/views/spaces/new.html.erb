@@ -1,13 +1,24 @@
-<h1> List your parking space </h1>
+<%= render 'shared/navbar_two' %>
 
-<%= simple_form_for @space do |f| %>
-<%= f.input :title %>
-<%= f.input :address %>
-<%= f.input :description %>
-<!-- Maybe have slider for adjusting amount? -->
-<%= f.input :half_hour_rate %>
-<!-- Needs to be boolean -->
-<%= f.input :availability, label: "Available" %>
-<%= f.submit %>
-<% end %>
+
+<h1 id = "list"> List your parking space </h1>
+<div class="card-container">
+
+  <div class="row">
+    <div class=".col-md-3 .ml-md-auto">
+      <div class = "form_two" >
+        <%= simple_form_for @space do |f| %>
+        <%= f.input :title %>
+        <%= f.input :address %>
+        <%= f.input :description %>
+        <!-- Maybe have slider for adjusting amount? -->
+        <%= f.input :half_hour_rate %>
+        <!-- Needs to be boolean -->
+        <%= f.input :availability, label: "Available" %>
+        <%= f.submit "Create Your Parking Space", class: "btn-park"  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Need to include image upload eventually -->

@@ -7,7 +7,8 @@
         <h1> Title: <%= @space.title %> </h1>
         <p> Address: <%= @space.address %></p>
         <p> Description: <%= @space.description %></p>
-         <p> 30 mins rate:<%= @space.half_hour_rate %></p>
+        <p> 30 mins rate:<%= @space.half_hour_rate %></p>
+        <button class = "btn-park"> <%= link_to "Book" , new_space_booking_path(@space) %> </button>
     </div>
   </div>
 </div>
