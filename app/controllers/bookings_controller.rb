@@ -5,14 +5,20 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @space = Space.find(params[:space_id])
     # @booking.user = current_user
-    @booking = Booking.create(booking_params)
-    @space = @booking.space
+    @booking = Booking.new(booking_params)
+    @booking.space = @space
+    @booking.user = current_user
+    @booking.status = "pending"
 
     if @booking.save
-      redirect_to space_booking_path(@booking)
+      # redirect_to space_booking_path(@booking)
+      redirect_to space_path(@space)
+      flash[:notice] = "Successfully created booking"
     else
       render 'new'
+      flash[:alert] = "Booking error"
     end
   end
 

@@ -1,7 +1,4 @@
-<h1>Book a parking space</h1>
-
-<!-- "Book " + @space.address -->
-
+<h1>Book to park at <%= @space.title %></h1>
 
 <%= simple_form_for [@space, @booking] do |f| %>
 <%= f.input :start_datetime, as: :datetime, html5: true, label: "Start time" %>
@@ -13,5 +10,3 @@
   Ruby syntax:
   @booking.total_price = ( (@booking.end_datetime - @booking.start_datetime) / 3600 * 2 ) * @space.half_hourly_rate
   -->
-
-<!-- "Book now" button, with Javascript flash for successful payment -->
