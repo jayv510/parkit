@@ -1,4 +1,6 @@
-<h1> All available parking spaces </h1>
+<%= render 'shared/navbar_two' %>
+
+<h1 class="spaces-h1"> All available parking spaces </h1>
 
 <div class="content">
 
@@ -17,8 +19,9 @@
          <h3><%= space.title %></h3>
          <p><%= space.address %></p>
          <p><%= space.description %></p>
-         <%= link_to "See more", space_path(space) %>
+       <%= link_to "", space_path(space) %>
        </figcaption>
+        </figure>
      </div>
         <% end %>
       <% end %>
