@@ -8,8 +8,9 @@ class SpacesController < ApplicationController
 
     @markers = @spaces.map do |flat|
       {
-        lng: flat.longitude,
-        lat: flat.latitude
+        lng: space.longitude,
+        lat: space.latitude,
+        infoWindow: { content: render_to_string(partial: "/spaces/map_window", locals: { space: space }) }
       }
     end
   end
