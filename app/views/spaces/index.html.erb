@@ -19,8 +19,9 @@
          <h3><%= space.title %></h3>
          <p><%= space.address %></p>
          <p><%= space.description %></p>
-         <%= link_to "See more", space_path(space) %>
+       <%= link_to "", space_path(space) %>
        </figcaption>
+        </figure>
      </div>
         <% end %>
       <% end %>
@@ -32,7 +33,7 @@
  style="width: 50%;
  height: 600px;"
  data-markers="<%= @markers.to_json %>"
- data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"> <%= cl_image_tag("map.jpg") %> </div>
+ data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"> </div>
 
 </div>
 

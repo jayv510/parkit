@@ -1,4 +1,10 @@
 // Spaces
+
+.spaces-h1 {
+padding-top: 75px;
+margin-left: 25px;
+}
+
 .content {
   display:flex;
 }
@@ -159,7 +165,7 @@
   height: 90vh;
   position: sticky !important; /* !important to override Gmaps inline CSS */
   top: 0 !important;
-  padding-top: 75px;
+  padding-top: 21px;
   margin: 0 50px;
 
 }

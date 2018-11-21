@@ -1,0 +1,34 @@
+
+.booking-h1 {
+  padding-top: 75px;
+  padding-left: 25px;
+}
+
+.booking-form {
+ display: flex;
+ width: 320px;
+ height: 500px;
+ padding: 15px;
+ border-radius: 5px;
+ background-color: white;
+ box-shadow: 5px 2px 8px 2px rgba(0,0,0,0.73);
+ color: #D36656;
+ margin-top: 20px;
+ padding: 30px;
+ margin: 28px 5px 0 20px;
+}
+
+#booking-map {
+ display: flex;
+ flex: 0 0 450px;
+ height: 90vh;
+ position: sticky !important; /* !important to override Gmaps inline CSS */
+ top: 0 !important;
+ padding-top: 25px;
+ margin: 0 25px 0 25px;
+
+}
+
+
+
+
