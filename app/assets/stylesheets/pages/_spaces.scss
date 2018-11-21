@@ -1,11 +1,145 @@
-#map {
-  flex: 0 0 450px;
-  height: 50vh;
-  position: sticky !important; /* !important to override Gmaps inline CSS */
-  top: 0 !important;
+// Spaces
+
+.content {
+  display:flex;
 }
 
-.container {
-  display: flex;
+.card-container {
+ display:flex;
+ justify-content: space-around;
+}
+
+.card {
+ background-color: #000000;
+ background-size: contain;
+ box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+ color: #ffffff;
+ font-family: 'Open Sans', Arial, sans-serif;
+ font-size: 16px;
+ line-height: 1.6em;
+ margin: 10px;
+ max-height: 200px;
+ max-width: 250px;
+ min-width: 210px;
+ overflow: hidden;
+ position: relative;
+ text-align: left;
+ width: 100%;
+ border-radius: 3px;
+ margin: 20px;
+}
+
+.card * {
+ -webkit-box-sizing: border-box;
+ box-sizing: border-box;
+ -webkit-transition: all 0.25s ease;
+ transition: all 0.25s ease;
+}
+
+.card img {
+ max-width: 100%;
+ vertical-align: top;
+ position: relative;
+ opacity: 0.75;
+ background-size: cover;
+}
+
+.card figcaption {
+ padding: 25px 20px 25px;
+ position: absolute;
+ bottom: 0;
+ z-index: 1;
+}
+
+.card .rate {
+ background-color: #fff;
+ color: #333;
+ font-size: 18px;
+ font-weight: 800;
+ min-height: 48px;
+ min-width: 48px;
+ padding: 10px 0;
+ position: absolute;
+ right: 15px;
+ text-align: center;
+ text-transform: uppercase;
+ top: 0;
+}
+
+.card .rate span {
+ display: block;
+ line-height: 14px;
+}
+
+.card .date .month {
+ font-size: 11px;
+}
+
+.card h3,
+.card p {
+ margin: 0;
+ padding: 0;
+}
+
+.card h3 {
+ font-weight: 800;
+ letter-spacing: -0.4px;
+}
+
+.card .hover {
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ align-items: center;
+ background-color: rgba(236, 188, 46, 0.75);
+ display: flex;
+ font-size: 65px;
+ justify-content: center;
+ opacity: 0;
+}
+
+.card a {
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ position: absolute;
+ z-index: 1;
+}
+
+.card:hover .hover,
+.card.hover .hover {
+ -webkit-transition-delay: 0.5s;
+ transition-delay: 0.5s;
+ opacity: 1;
+}
+
+.card:hover figcaption,
+.card.hover figcaption {
+ opacity: 0;
+}
+
+.card:hover .rate,
+.card.hover .rate {
+ -webkit-transform: translateY(-100%);
+ transform: translateY(-100%);
+}
+
+.thirty {
+ font-size:12px;
+ padding: 3px;
+ padding-bottom: 0px;
+}
+
+// Map
+
+#map {
+  flex: 0 0 450px;
+  height: 100vh;
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+  margin: 0 50px;
 }
 
