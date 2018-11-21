@@ -2,6 +2,16 @@ class SpacesController < ApplicationController
 
   def index
     @spaces = Space.all
+
+    #geocoding
+    @spaces = Space.where.not(latitude: nil, longitude: nil)
+
+    @markers = @spaces.map do |flat|
+      {
+        lng: flat.longitude,
+        lat: flat.latitude
+      }
+    end
   end
 
   def new
