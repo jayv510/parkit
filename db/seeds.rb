@@ -74,8 +74,8 @@ url_7 = "https://ibb.co/eh3rFV"
 
 Space.create(
   user_id: User.last.id,
-  title: "Private Jet Parking",
-  description: "Are you a private jet owner? Need a space to park your million dollars? Look no further!",
+  title: "Jet Parking",
+  description: "Are you a private jet owner?",
   address: "Pudong International Airport",
   half_hour_rate: 10000,
   availability: true,
@@ -84,7 +84,7 @@ Space.create(
 Space.create(
   user_id: User.last.id,
   title: "People's Square",
-  description: "Lovely little parking spot right in the middle of People's Square. Exclusive!",
+  description: "Lovely little parking spot",
   address: "People's Square, Shanghai",
   half_hour_rate: 500,
   availability: true,
@@ -92,8 +92,8 @@ Space.create(
 
 Space.create(
   user_id: User.last.id,
-  title: "World Financial Center",
-  description: "Park underneath the tallest building in Shanghai!",
+  title: "Financial Center",
+  description: "Tallest building in Shanghai!",
   address: "Shanghai World Financial Center",
   half_hour_rate: 350,
   availability: true,
@@ -101,8 +101,8 @@ Space.create(
 
 Space.create(
   user_id: User.last.id,
-  title: "Off-street in Hunan Rd",
-  description: "Safe and secure parking spot behind a locked gate with CCTV",
+  title: "Hunan Rd",
+  description: "Safe and secure parking spot",
   address: "Hunan Road, Shanghai",
   half_hour_rate: 20,
   availability: true,
@@ -112,15 +112,15 @@ Space.create(
   user_id: User.last.id,
   title: "Kerry Center Parking Lot",
   address: "Jing'an Kerry Center",
-  description: "For those who love shopping but hate parking.",
+  description: "For those who love shopping",
   half_hour_rate: 50,
   availability: true,
   remote_photo_url: url_5)
 
 Space.create(
   user_id: User.last.id,
-  title: "Private Space Near Four Seasons Hotel",
-  description: "Adorable little parking space with views of the city.",
+  title: "Four Seasons Hotel",
+  description: "Adorable little parking space",
   address: "Four Seasons Hotel Shanghai",
   half_hour_rate: 60,
   availability: true,
@@ -128,8 +128,8 @@ Space.create(
 
 Space.create(
   user_id: User.last.id,
-  title: "Exclusive Parking in Front of XinTianDi",
-  description: "For those who are serious about eating upscale but hate walking.",
+  title: "XinTianDi",
+  description: "Convenient parking spot",
   address: "xintiandi, shanghai",
   half_hour_rate: 400,
   availability: true,

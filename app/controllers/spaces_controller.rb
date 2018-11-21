@@ -28,6 +28,13 @@ class SpacesController < ApplicationController
 
   def show
     @space = Space.find(params[:id])
+
+    @markers =
+      [{
+        lng: @space.longitude,
+        lat: @space.latitude,
+        infoWindow: { content: render_to_string(partial: "/spaces/map_window", locals: { space: @space }) }
+      }]
   end
 
   def edit
