@@ -25,6 +25,7 @@ gem 'carrierwave', '~> 1.2'
 
 gem 'devise'
 gem "geocoder"
+gem "rest-client", '>= 1.2'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
