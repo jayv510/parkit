@@ -6,7 +6,7 @@ class SpacesController < ApplicationController
     #geocoding
     @spaces = Space.where.not(latitude: nil, longitude: nil)
 
-    @markers = @spaces.map do |flat|
+    @markers = @spaces.map do |space|
       {
         lng: space.longitude,
         lat: space.latitude,
