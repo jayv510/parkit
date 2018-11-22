@@ -42,6 +42,13 @@ class BookingsController < ApplicationController
     @parker = @booking.user
     @space = @booking.space
     @space_owner = @booking.space.user
+
+    @markers =
+      [{
+        lng: @space.longitude,
+        lat: @space.latitude,
+        infoWindow: { content: render_to_string(partial: "/spaces/map_window", locals: { space: @space }) }
+      }]
   end
 
   def edit
