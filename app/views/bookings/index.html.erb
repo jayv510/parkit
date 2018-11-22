@@ -1,27 +1,112 @@
-<!-- Bookings I've MADE -->
-<h1>Bookings I've MADE</h1>
+<%= render 'shared/navbar_two' %>
 
-<% @bookings_made.each do |booking| %>
-  <%= link_to booking_path(booking) do %>
-    <h3><%= booking.space.title %></h3>
-    <p><%= booking.space.address %></p>
-    <p>From <%= booking.start_datetime.strftime('%A %b %e')%> at <%= booking.start_datetime.strftime('%R')%></p>
-    <p>Until <%= booking.end_datetime.strftime('%A %b %e')%> at <%= booking.end_datetime.strftime('%R')%></p>
-    <p><%= booking.total_price %> RMB</p>
-  <% end %>
-<% end %>
+<div class="bks-wrapper">
+  <div class="bks-content">
+    <div class="bks-card-container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
 
-<!-- -------------------------------------------------- -->
+            <div class="bks-col-left">
 
-<!-- Bookings I've RECEIVED -->
-<h1>Bookings I've RECEIVED</h1>
+              <h2 class="bk-h2">Bookings MADE</h2>
 
-<% @bookings_received.each do |booking| %>
-  <%= link_to booking_path(booking) do %>
-    <h3><%= booking.space.title %></h3>
-    <p><%= booking.user.first_name %> <%= booking.user.last_name %> has made this booking.</p>
-    <p>From <%= booking.start_datetime.strftime('%A %b %e')%> at <%= booking.start_datetime.strftime('%R')%></p>
-    <p>Until <%= booking.end_datetime.strftime('%A %b %e')%> at <%= booking.end_datetime.strftime('%R')%></p>
-    <p><%= booking.total_price %> RMB</p>
-  <% end %>
-<% end %>
+                    <% @bookings_made.each do |booking| %>
+                      <%= link_to booking_path(booking) do %>
+
+                          <div class="bks-card-made">
+
+                            <div class=row>
+
+                              <div class="col-xs-6">
+
+                                  <div class="bks-card-left">
+
+                                      <h3 class="bk-h3"><%= booking.space.title %></h3>
+                                      <p><%= booking.total_price %> RMB</p>
+                                  </div>
+
+
+                              </div>
+
+                            </div>
+
+
+                            <div class="row">
+
+                              <div class="col-xs-4">
+
+                                  <div class="bks-card-right">
+                                      <p><%= booking.start_datetime.strftime('%A %b %e')%> at <%= booking.start_datetime.strftime('%R')%></p>
+                                      <p><strong>TO</strong></p>
+                                      <p><%= booking.end_datetime.strftime('%A %b %e')%> at <%= booking.end_datetime.strftime('%R')%></p>
+
+                                  </div>
+
+                              </div>
+                            </div>
+
+
+                          </div>
+
+
+                      <% end %>
+                    <% end %>
+
+            </div>
+        </div>
+                    <!-- -------------------------------------------------- -->
+
+          <div class="col-xs-12 col-sm-6">
+
+            <div class="bks-col-right">
+
+                    <h2 class="bk-h2">Bookings RECEIVED</h2>
+
+                    <% @bookings_received.each do |booking| %>
+                      <%= link_to booking_path(booking) do %>
+
+                        <div class="bks-card-recd">
+
+                            <div class="row">
+
+                              <div class="col-xs-8">
+
+                                <div class="bks-card-left">
+                                  <h3 class="bk-h3"><%= booking.space.title %></h3>
+                                  <p>Booked by <%= booking.user.first_name %> <%= booking.user.last_name %> </p>
+                                  <p><%= booking.total_price %> RMB</p>
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                            <div class="row">
+
+                              <div class="col-xs-4">
+
+
+                                <div class="bks-card-right">
+                                  <p><%= booking.start_datetime.strftime('%A %b %e')%> at <%= booking.start_datetime.strftime('%R')%></p>
+                                  <p><strong>TO</strong></p>
+                                  <p><%= booking.end_datetime.strftime('%A %b %e')%> at <%= booking.end_datetime.strftime('%R')%></p>
+
+                                </div>
+
+                              </div>
+
+                            </div>
+
+
+                        </div>
+                      <% end %>
+                    <% end %>
+
+            </div>
+          </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
