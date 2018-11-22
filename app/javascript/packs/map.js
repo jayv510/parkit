@@ -9,7 +9,7 @@ if (mapElement) { // only build a map if there's a div#map to inject into
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/jayv510/cjoqlgysx6ank2rt2wezukji4'
+    style: 'mapbox://styles/jayv510/cjorzsad41rt02snwb27j4jfp'
   });
 // [ ... ]
   const markers = JSON.parse(mapElement.dataset.markers);
@@ -49,7 +49,7 @@ if (mapElement) { // only build a map if there's a div#map to inject into
 
 }
 
-  const addressInput = document.getElementById('flat_address');
+  const addressInput = document.getElementById('space_address');
 
   if (addressInput) {
     const places = require('places.js');
