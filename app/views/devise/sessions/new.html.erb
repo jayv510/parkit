@@ -2,7 +2,7 @@
 
 <h2 id = "title-login">Log in</h2>
 <div class="card-container">
- <div class="row">
+ <div class="row" id = "th">
   <div class="col-xs-6 col-md-4" id = "single">
     <div class = "form_three">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -18,7 +18,7 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Log in" %>
+        <%= f.button :submit, "Log in" ,class: "btn-park", id: "bo" %>
       </div>
       <% end %>
     </div>
@@ -26,6 +26,10 @@
 </div>
 </div>
 
-<div class = "links">
-<%= render "devise/shared/links" %>
+<div id= "om">
+<%= link_to "Sign up", new_registration_path(resource_name), class: "btn-park" %>
+<%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn-park"  %>
 </div>
+<!-- <div class = "links_three" , style = "line-height: 160%;">
+<%= render "devise/shared/links" %>
+</div> -->
