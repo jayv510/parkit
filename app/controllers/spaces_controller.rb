@@ -3,7 +3,8 @@ before_action :geocode_address, only: :index
 #grab geocode coordinates as soon as index renders
 
   def index
-    @spaces = Space.all
+    # @spaces = Space.all
+    @spaces = policy_scope(Space)
     @space_address = params[:space_address]
 
     #geocoding
@@ -24,17 +25,20 @@ before_action :geocode_address, only: :index
 
   def new
     @space = Space.new
+    authorize @space
   end
 
   def create
     @space = Space.new(space_params)
     @space.user = current_user
+    authorize @space
     @space.save
     redirect_to spaces_path
   end
 
   def show
     @space = Space.find(params[:id])
+    authorize @space
 
     @markers =
       [{
@@ -46,16 +50,19 @@ before_action :geocode_address, only: :index
 
   def edit
     @space = Space.find(params[:id])
+    authorize @space
   end
 
   def update
     @space = Space.find(params[:id])
+    authorize @space
     @space.update(space_params)
     redirect_to space_path(@space)
   end
 
   def destroy
     @space = Space.find(params[:id])
+    authorize @space
     @space.destroy
     redirect_to spaces_path
   end

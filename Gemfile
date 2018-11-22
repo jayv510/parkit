@@ -7,7 +7,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
-gem 'faker'
+
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
@@ -17,13 +17,13 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
-
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
 
-
 gem 'devise'
+gem 'pundit'
+
 gem "geocoder"
 gem "rest-client", '>= 1.2'
 
@@ -38,4 +38,5 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
+  gem 'faker'
 end
