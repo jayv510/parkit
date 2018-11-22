@@ -1,7 +1,7 @@
 <!-- Bookings I've MADE -->
 <h1>Bookings I've MADE</h1>
 
-<% @bookings.each do |booking| %>
+<% @bookings_made.each do |booking| %>
   <%= link_to booking_path(booking) do %>
     <h3><%= booking.space.title %></h3>
     <p><%= booking.space.address %></p>
@@ -16,7 +16,7 @@
 <!-- Bookings I've RECEIVED -->
 <h1>Bookings I've RECEIVED</h1>
 
-<% @bookings.each do |booking| %>
+<% @bookings_received.each do |booking| %>
   <%= link_to booking_path(booking) do %>
     <h3><%= booking.space.title %></h3>
     <p><%= booking.user.first_name %> <%= booking.user.last_name %> has made this booking.</p>
