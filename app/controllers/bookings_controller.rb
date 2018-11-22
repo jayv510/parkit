@@ -2,18 +2,13 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+    @bookings_made = current_user.bookings
+    @bookings_received = Booking.all.joins(:space).where("spaces.user_id = ?", current_user.id)
   end
 
   def new
     @space = Space.find(params[:space_id])
     @booking = Booking.new
-
-    @markers =
-      [{
-        lng: @space.longitude,
-        lat: @space.latitude,
-        infoWindow: { content: render_to_string(partial: "/spaces/map_window", locals: { space: @space }) }
-      }]
   end
 
   def create
@@ -41,7 +36,6 @@ class BookingsController < ApplicationController
     @parker = @booking.user
     @space = @booking.space
     @space_owner = @booking.space.user
-
   end
 
   def edit
