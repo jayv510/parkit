@@ -63,6 +63,8 @@ User.create(
 
 # SPACES
 
+Space.delete_all
+
 url_1 = "https://ibb.co/mdswhA"
 url_2 = "https://ibb.co/ki5tUq"
 url_3 = "https://ibb.co/gvgBFV"
