@@ -2,6 +2,7 @@ class SpacesController < ApplicationController
 
   def index
     @spaces = Space.all
+    @space_address = params[:space_address]
 
     #geocoding
     @spaces = Space.where.not(latitude: nil, longitude: nil)
