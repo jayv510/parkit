@@ -29,7 +29,7 @@ class BookingsController < ApplicationController
 
     if @booking.save
       # redirect_to space_booking_path(@booking)
-      redirect_to space_path(@space)
+      redirect_to space_bookings_path(@space)
       flash[:notice] = "Successfully created booking"
     else
       render 'new'
