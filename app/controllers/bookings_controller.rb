@@ -2,6 +2,8 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
+    @bookings_made = current_user.bookings
+    @bookings_received = Booking.all.joins(:space).where("spaces.user_id = ?", current_user.id)
   end
 
   def new

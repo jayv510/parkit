@@ -7,8 +7,9 @@ Rails.application.routes.draw do
     resources :bookings, shallow: true
   end
 
-  resources :users do
-    resources :bookings
-  end
+  resources :bookings, only: :index
+
+
+
 
 end
