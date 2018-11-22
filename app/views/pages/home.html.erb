@@ -7,10 +7,8 @@
      <h1><span id="banner-typed-text"></span></h1>
 
      <div class = "form" >
-      <%= simple_form_for "" do |f| %>
-        <%= f.input :Where %>
-        <%= f.input "Start time"%>
-        <%= f.input "End time" %>
+      <%= simple_form_for "", :url => spaces_path, :method => :get do |f| %>
+        <%= f.input :space_address, as: :string, label: 'Where do you want to park?' %>
         <%= f.submit "Find", class: "btn-park" %>
       <% end %>
     </div>
