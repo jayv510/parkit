@@ -8,6 +8,11 @@
         <p> <%= @space.address %></p>
         <p> <%= @space.description %></p>
         <p id = "bu" > 30 mins rate: <%= @space.half_hour_rate %></p>
+
+        <div class="show-image"><%= cl_image_tag @space.photo, height: 350, width: 350, crop: :fill %></div>
+        <br>
+        <br>
+
          <%= link_to "Book" , new_space_booking_path(@space), class: "btn-park", id: "tu" %>
     </div>
   </div>
