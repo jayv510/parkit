@@ -6,8 +6,8 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagas-right hidden-xs hidden-sm">
-  <%= link_to "List Your Space", "#", class: "navbar-wagas-item navbar-wagas-link" %>
-      <%= link_to "Help", "#", class: "navbar-wagas-item navbar-wagas-link" %>
+     <%= link_to "See All Listings", spaces_path, class: "navbar-wagas-item navbar-wagas-link" %>
+  <%= link_to "List Your Space", new_space_path, class: "navbar-wagas-item navbar-wagas-link" %>
       <%= link_to "Sign Up", "/users/sign_up", class: "navbar-wagas-item navbar-wagas-link" %>
 
     <% if user_signed_in? %>

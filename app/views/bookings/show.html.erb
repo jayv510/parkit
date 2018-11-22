@@ -1,4 +1,25 @@
 <!-- conditional logic or Pundit? -->
+<%= render 'shared/navbar_two' %>
+<div class="content">
+
+  <div class="card-container">
+   <div class="row">
+    <div class="col-xs-6 col-md-4" >
+      <div id = "single">
+        <h1> <%= @space.title %> </h1>
+        <p> <%= @space.address %></p>
+        <p> <%= @space.description %></p>
+        <p> Price: ¥<%= @booking.total_price %></p>
+        <p id = "bu" > 30 mins rate: <%= @space.half_hour_rate %></p>
+
+        <div class="show-image"><%= cl_image_tag @space.photo, height: 280, width: 280, crop: :fill %></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
 
 <!-- Bookings I've MADE -->
 

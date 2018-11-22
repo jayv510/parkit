@@ -39,9 +39,14 @@ box-shadow: 5px 5px 41px -6px #000000;
   text-align: center;
 }
 
+#op {
+  margin:1px;
+}
+
 #list {
   text-align: center;
-  padding-top: 75px;
+  padding-top: 8px;
+  margin-bottom: -10px;
 }
 .form_two {
   display: flex;
@@ -49,10 +54,9 @@ box-shadow: 5px 5px 41px -6px #000000;
   height: 500px;
   padding: 15px;
   border-radius: 5px;
-  background-color:#D36656;
-  box-shadow: 5px 2px 8px 2px rgba(0,0,0,0.73);
   color: black;
   margin-top: 20px;
+  margin-right: 100px;
 }
 #th {
   margin-left: -130px;
