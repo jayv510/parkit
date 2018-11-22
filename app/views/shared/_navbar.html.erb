@@ -8,7 +8,6 @@
   <div class="navbar-wagas-right hidden-xs hidden-sm">
      <%= link_to "See All Listings", spaces_path, class: "navbar-wagas-item navbar-wagas-link" %>
   <%= link_to "List Your Space", new_space_path, class: "navbar-wagas-item navbar-wagas-link" %>
-      <%= link_to "Sign Up", "/users/sign_up", class: "navbar-wagas-item navbar-wagas-link" %>
 
     <% if user_signed_in? %>
 
@@ -18,7 +17,7 @@
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagas-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagas-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "https://assets.vg247.com/current//2018/04/spiderman.jpg", class: "avatar dropdown-toggle", id: "navbar-wagas-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagas-dropdown-menu">
             <li>
               <%= link_to "#" do %>
