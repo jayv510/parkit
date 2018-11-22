@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def index
     @bookings = Booking.all
     @bookings_made = current_user.bookings
@@ -9,6 +8,13 @@ class BookingsController < ApplicationController
   def new
     @space = Space.find(params[:space_id])
     @booking = Booking.new
+
+    @markers =
+      [{
+        lng: @space.longitude,
+        lat: @space.latitude,
+        infoWindow: { content: render_to_string(partial: "/spaces/map_window", locals: { space: @space }) }
+      }]
   end
 
   def create
