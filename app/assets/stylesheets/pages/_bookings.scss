@@ -30,5 +30,85 @@
 }
 
 
+// ------------------------------- BOOKINGS PAGE
+
+.bk-h2 {
+  margin-left: 20px;
+}
+
+.bk-h3 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.bks-content {
+  display:flex;
+}
+
+.bks-card-container {
+ display:flex;
+ justify-content: space-around;
+ padding-left: 50px;
+ margin: 0 145px;
+}
 
 
+.bks-card-made {
+ display:flex;
+ background-color: #54C676;
+ background-size: contain;
+ box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+ color: #FFFFFF;
+ font-family: 'Open Sans', Arial, sans-serif;
+ font-size: 15px;
+ line-height: 1.4em;
+ margin: 25px 20px;
+ height: 105px;
+ max-width: 500px;
+ min-width: 210px;
+ overflow: hidden;
+ position: relative;
+ text-align: left;
+ width: 100%;
+ border-radius: 3px;
+ padding: 0 20px;
+}
+
+
+.bks-card-recd {
+ display:flex;
+ background-color: #D16759;
+ background-size: contain;
+ box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+ color: #FFFFFF;
+ font-family: 'Open Sans', Arial, sans-serif;
+ font-size: 15px;
+ line-height: 1.4em;
+ margin: 25px 20px;
+ height: 105px;
+ max-width: 500px;
+ min-width: 210px;
+ overflow: hidden;
+ position: relative;
+ text-align: left;
+ width: 100%;
+ border-radius: 3px;
+ padding: 0 20px;
+}
+
+
+.bks-col-right {
+  margin-top: 55px;
+}
+
+
+.bks-card-left {
+ width: 230px;
+ line-height: 0.8;
+}
+
+.bks-card-right {
+width: 180px;
+padding-top: 20px;
+line-height: 0.8;
+}
