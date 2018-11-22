@@ -1,7 +1,6 @@
 <!-- Bookings I've MADE -->
 <h1>Bookings I've MADE</h1>
 
-
 <% @bookings.each do |booking| %>
   <% if booking.user == current_user %>
     <%= link_to booking_path(booking) do %>
@@ -18,7 +17,6 @@
 
 <!-- Bookings I've RECEIVED -->
 <h1>Bookings I've RECEIVED</h1>
-
 
 <% @bookings.each do |booking| %>
   <% if booking.space.user == current_user %>
