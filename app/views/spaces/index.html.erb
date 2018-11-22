@@ -2,7 +2,13 @@
 
 <h1 class="spaces-h1"> All available parking spaces </h1>
 
+<% unless @coordinates == false%>
 <h3 style="margin-left: 40px"><%= @space_address %></h3>
+<% else %> 
+<h3 style="margin-left: 40px"> <%= "Invalid address, showing all listings" %> </h3>
+<% end %>
+
+<%#= @coordinates %>
 
 
 <div class="content">

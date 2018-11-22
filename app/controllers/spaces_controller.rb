@@ -1,11 +1,17 @@
 class SpacesController < ApplicationController
+before_action :geocode_address, only: :index
+#grab geocode coordinates as soon as index renders
 
   def index
     @spaces = Space.all
     @space_address = params[:space_address]
 
     #geocoding
+    if @coordinates
+      @spaces = Space.near(@coordinates, 10)
+    else
     @spaces = Space.where.not(latitude: nil, longitude: nil)
+    end
 
     @markers = @spaces.map do |space|
       {
@@ -55,6 +61,20 @@ class SpacesController < ApplicationController
   end
 
   private
+
+  def geocode_address
+    if params[:space_address]
+      @address = Geocoder.search(params[:space_address])
+      # geocoder gives an array of possible coordinates
+      unless @address.empty?
+        @coordinates = @address.first.coordinates
+      # retrieve the first coordinates if address exists
+      else
+      return @coordinates = false
+      end
+
+    end
+  end
 
   def space_params
     params.require(:space).permit(:title, :description, :address, :half_hour_rate, :availability, :photo)
