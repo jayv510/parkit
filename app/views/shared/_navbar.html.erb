@@ -1,26 +1,25 @@
-<div class="navbar-wagon">
+<div class="navbar-wagas">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+  <%= link_to root_path, class: "navbar-wagas-brand" do %>
     <img src="<%= cl_image_path("logovan.png")%>"
   <% end %>
 
   <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-  <%= link_to "List Your Space", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Help", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Sign Up", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <div class="navbar-wagas-right hidden-xs hidden-sm">
+  <%= link_to "List Your Space", "#", class: "navbar-wagas-item navbar-wagas-link" %>
+      <%= link_to "Help", "#", class: "navbar-wagas-item navbar-wagas-link" %>
+      <%= link_to "Sign Up", "#", class: "navbar-wagas-item navbar-wagas-link" %>
 
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Bookings", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "My Bookings", "#", class: "navbar-wagas-item navbar-wagas-link" %>
 
       <!-- Avatar with dropdown menu -->
-      <div class="navbar-wagon-item">
+      <div class="navbar-wagas-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagas-menu", "data-toggle" => "dropdown" %>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagas-dropdown-menu">
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
@@ -41,15 +40,15 @@
       </div>
     <% else %>
       <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagas-item navbar-wagas-link" %>
     <% end %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
+  <div class="navbar-wagas-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagas-dropdown-menu">
         <li><a href="#">Some mobile link</a></li>
         <li><a href="#">Other one</a></li>
         <li><a href="#">Other one</a></li>

@@ -17,8 +17,8 @@
        <div class="rate"><span class="dollar"><%= space.half_hour_rate %></span><span class="thirty">/30min</span></div>
        <figcaption>
          <h3><%= space.title %></h3>
-         <p><%= space.address %></p>
-         <p><%= space.description %></p>
+         <p id = "desc"><%= space.address %></p>
+         <p id = "asc"><%= space.description %></p>
        <%= link_to "", space_path(space) %>
        </figcaption>
         </figure>

@@ -1,8 +1,9 @@
 // Spaces
 
 .spaces-h1 {
-padding-top: 75px;
+padding-top: 10px;
 margin-left: 25px;
+padding-bottom: 10px;
 }
 
 .content {
@@ -12,15 +13,17 @@ margin-left: 25px;
 .card-container {
  display:flex;
  justify-content: space-around;
+ padding-left: 50px;
+ margin-right: 50px;
 }
 
 .card {
  background-color: #000000;
  background-size: contain;
  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
- color: #ffffff;
+ color: #FFFFFF;
  font-family: 'Open Sans', Arial, sans-serif;
- font-size: 16px;
+ font-size: 15px;
  line-height: 1.6em;
  margin: 10px;
  max-height: 200px;
@@ -47,6 +50,7 @@ margin-left: 25px;
  position: relative;
  opacity: 0.75;
  background-size: cover;
+ filter: brightness(70%);
 }
 
 .card figcaption {
@@ -63,12 +67,13 @@ margin-left: 25px;
  font-weight: 800;
  min-height: 48px;
  min-width: 48px;
- padding: 10px 0;
+ padding: 10px 5px;
  position: absolute;
  right: 15px;
  text-align: center;
  text-transform: uppercase;
  top: 0;
+ border-radius: 2px;
 }
 
 .card .rate span {
@@ -82,10 +87,20 @@ margin-left: 25px;
 
 .card h3,
 .card p {
- margin: 0;
+ margin-top: 3px;
  padding: 0;
 }
 
+#desc {
+  margin-top: 1px;
+  font-weight: bold;
+}
+
+#asc {
+  margin-top: -5px;
+  margin-bottom: -5px;
+  font-weight: lighter;
+}
 .card h3 {
  font-weight: 800;
  letter-spacing: -0.4px;
@@ -170,10 +185,18 @@ margin-left: 25px;
 
 }
 
+#bu {
+  margin-bottom: 25px;
+}
 
+#tu {
+  margin-left: 1px;
+}
 
 #single {
-  margin: 200px;
+  padding-top: 15px;
+  margin: 55px 30px 150px 250px;
+  width: 350px;
 }
 
 .links {
