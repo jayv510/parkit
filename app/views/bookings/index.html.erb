@@ -1,0 +1,33 @@
+<!-- Bookings I've MADE -->
+<h1>Bookings I've MADE</h1>
+
+
+<% @bookings.each do |booking| %>
+  <% if booking.user == current_user %>
+    <%= link_to booking_path(booking) do %>
+      <h3><%= booking.space.title %></h3>
+      <p><%= booking.space.address %></p>
+      <p>From <%= booking.start_datetime.strftime('%A %b %e')%> at <%= booking.start_datetime.strftime('%R')%></p>
+      <p>Until <%= booking.end_datetime.strftime('%A %b %e')%> at <%= booking.end_datetime.strftime('%R')%></p>
+      <p><%= booking.total_price %> RMB</p>
+    <% end %>
+  <% end %>
+<% end %>
+
+<!-- -------------------------------------------------- -->
+
+<!-- Bookings I've RECEIVED -->
+<h1>Bookings I've RECEIVED</h1>
+
+
+<% @bookings.each do |booking| %>
+  <% if booking.space.user == current_user %>
+    <%= link_to booking_path(booking) do %>
+      <h3><%= booking.space.title %></h3>
+      <p><%= booking.user.first_name %> <%= booking.user.last_name %> has made this booking.</p>
+      <p>From <%= booking.start_datetime.strftime('%A %b %e')%> at <%= booking.start_datetime.strftime('%R')%></p>
+      <p>Until <%= booking.end_datetime.strftime('%A %b %e')%> at <%= booking.end_datetime.strftime('%R')%></p>
+      <p><%= booking.total_price %> RMB</p>
+    <% end %>
+  <% end %>
+<% end %>
