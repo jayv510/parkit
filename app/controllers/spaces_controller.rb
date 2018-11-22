@@ -69,6 +69,8 @@ before_action :geocode_address, only: :index
       unless @address.empty?
         @coordinates = @address.first.coordinates
       # retrieve the first coordinates if address exists
+      else
+      return @coordinates = false
       end
 
     end
