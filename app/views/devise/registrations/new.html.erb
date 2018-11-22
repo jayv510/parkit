@@ -4,20 +4,24 @@
 <h2 id = "title-login">Sign up</h2>
 <div class="card-container">
  <div class="row">
-  <div class="col-xs-6 col-md-4" id = "single">
+  <div class=".col-md-3 .ml-md-auto" id = "single">
+
     <div class = "form_four">
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
       <div class="form-inputs">
-        <%= f.input :first_name,
+       <ul class = "list-inline">
+        <li> <%= f.input :first_name,
         required: true,
         autofocus: true ,
-        input_html: { autocomplete: "first_name" }%>
-        <%= f.input :last_name,
+        input_html: { autocomplete: "first_name" }%></li>
+        <li> <%= f.input :last_name,
         required: true,
         autofocus: true ,
-        input_html: { autocomplete: "last_name" }%>
+        input_html: { autocomplete: "last_name" }%></li>
+        </ul>
+
         <%= f.input :phone_number,
         required: true,
         autofocus: true ,
@@ -33,10 +37,11 @@
         <%= f.input :password_confirmation,
         required: true,
         input_html: { autocomplete: "new-password" } %>
+
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Sign up" %>
+        <%= f.button :submit, "Sign up", class: "btn-park", id: "bo" %>
       </div>
       <% end %>
       </div>
@@ -44,7 +49,6 @@
   </div>
 </div>
 
-
-<div class = "links">
+<div class = "links_two">
 <%= render "devise/shared/links" %>
 </div>

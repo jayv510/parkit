@@ -3,12 +3,18 @@
 
   <div class="card-container">
    <div class="row">
-    <div class="col-xs-6 col-md-4" id = "single">
+    <div class="col-xs-6 col-md-4" >
+      <div id = "single">
         <h1> <%= @space.title %> </h1>
         <p> <%= @space.address %></p>
         <p> <%= @space.description %></p>
         <p id = "bu" > 30 mins rate: <%= @space.half_hour_rate %></p>
+
+        <div class="show-image"><%= cl_image_tag @space.photo, height: 280, width: 280, crop: :fill %></div>
+        <br>
+        <br>
          <%= link_to "Book" , new_space_booking_path(@space), class: "btn-park", id: "tu" %>
+      </div>
     </div>
   </div>
 </div>
@@ -16,7 +22,7 @@
 
   <div id="map"
    style="width: 100%;
-   height: 600px;"
+   height: 600px; margin-top: 20px;"
    data-markers="<%= @markers.to_json %>"
    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
