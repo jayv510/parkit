@@ -65,7 +65,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     authorize @booking
     @booking.update(booking_params)
-    redirect_to space_booking_path(@space)
+    redirect_to booking_path(@booking)
   end
 
   def destroy
