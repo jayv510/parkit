@@ -36,7 +36,17 @@
 
               <div class="show-image"><%= cl_image_tag @space.photo, height: 280, width: 280, crop: :fill %></div>
 
-              <%= link_to "Edit this booking", edit_booking_path(@booking) %>
+  <br>
+  <% if policy(@booking).edit? %>
+    <%= link_to "Edit booking", edit_booking_path(@booking) %>
+  <% end %>
+  <% if policy(@booking).destroy? %>
+    <%= link_to booking_path(@booking),
+      method: :delete,
+      data: {confirm: "Are you sure?"} do %>
+        <p>Remove this booking</p>
+    <% end %>
+  <% end %>
 
             </div>
 
@@ -53,16 +63,6 @@
       </div>
 
 
-  <% if policy(@booking).edit? %>
-    <%= link_to "Edit booking", edit_booking_path(@booking) %>
-  <% end %>
-  <% if policy(@booking).destroy? %>
-    <%= link_to booking_path(@booking),
-      method: :delete,
-      data: {confirm: "Are you sure?"} do %>
-        <p>Remove this booking</p>
-    <% end %>
-  <% end %>
 
 
 <!-- Bookings I've MADE -->
