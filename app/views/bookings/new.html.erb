@@ -1,5 +1,6 @@
 <%= render 'shared/navbar_two' %>
 
+
 <h1 class="booking-h1">Book to park at <%= @space.title %></h1>
 
 <div class="content col-xs-6">
@@ -17,7 +18,9 @@
         <%= f.submit "Book now", class: "btn-park", id: "os"  %>
         <% end %>
       </div>
-
+      <!-- <div id="">
+        <input id="myID" type="text" value="" />
+      </div> -->
 
      </div>
 
@@ -42,7 +45,20 @@
   Ruby syntax:
   @booking.total_price = ( (@booking.end_datetime - @booking.start_datetime) / 3600 * 2 ) * @space.half_hourly_rate
   -->
+<script>
+  flatpickr("#booking_start_datetime", {
+    enableTime: true,
+    dateFormat: "Y/m/d,H:i",
+    minDate: "today"
+  });
 
+  flatpickr("#booking_end_datetime", {
+    enableTime: true,
+    dateFormat: "Y/m/d,H:i",
+    minDate: "today"
+  });
+
+</script>
 
 
 
