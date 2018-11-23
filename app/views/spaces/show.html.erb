@@ -10,7 +10,7 @@
         <h1> <%= @space.title %> </h1>
         <p> <%= @space.address %></p>
         <p> <%= @space.description %></p>
-        <p id = "bu" > 30 mins rate: <%= @space.half_hour_rate %></p>
+        <p id = "bu" ><%= @space.half_hour_rate %> RMB / 30 min</p>
 
         <div class="show-image"><%= cl_image_tag @space.photo, height: 280, width: 280, crop: :fill %></div>
         <br>
