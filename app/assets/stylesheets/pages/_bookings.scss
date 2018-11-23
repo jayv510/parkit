@@ -42,69 +42,79 @@
 .bks-card-container {
  display:flex;
  justify-content: space-around;
- padding-left: 50px;
- margin: 0 145px;
+ padding-left: 45px;
+ margin: 0 55px;
 }
 
 
 .bks-card-made {
  display:flex;
- background-color: #54C676;
+ background-color: #F7F8F7;
  background-size: contain;
- box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
- color: #FFFFFF;
+ color: black;
  font-family: 'Open Sans', Arial, sans-serif;
  font-size: 15px;
  line-height: 1.4em;
- margin: 25px 20px;
- height: 105px;
+ margin: 30px 20px;
+ height: 150px;
  max-width: 500px;
  min-width: 210px;
  overflow: hidden;
  position: relative;
  text-align: left;
  width: 100%;
- border-radius: 3px;
- padding: 0 20px;
+ border-radius: 5px;
+ padding: 0 25px;
+
 }
+
+.bks-card-made { transition: all .3s ease-in-out; }
+
+.bks-card-made:hover { transform: scale(1.05); }
+
 
 
 .bks-card-recd {
  display:flex;
- background-color: #D16759;
+ background-color: #F7F8F7;
  background-size: contain;
- box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
- color: #FFFFFF;
+ color: black;
  font-family: 'Open Sans', Arial, sans-serif;
  font-size: 15px;
  line-height: 1.4em;
- margin: 25px 20px;
- height: 105px;
+ margin: 30px 20px;
+ height: 150px;
  max-width: 500px;
  min-width: 210px;
  overflow: hidden;
  position: relative;
  text-align: left;
  width: 100%;
- border-radius: 3px;
- padding: 0 20px;
+ border-radius: 5px;
+ padding: 0 25px;
 }
 
+.bks-card-recd { transition: all .3s ease-in-out; }
+
+.bks-card-recd:hover { transform: scale(1.05); }
 
 .bks-col-right {
   margin-top: 55px;
+  margin-left: 1vw;
 }
 
 
 .bks-card-left {
  width: 230px;
- line-height: 0.8;
+ line-height: 1.2;
+  padding-top: 1.5vh;
+
 }
 
 .bks-card-right {
 width: 180px;
 padding-top: 20px;
-line-height: 0.8;
+line-height: 1.2;
 }
 
 
