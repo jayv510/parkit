@@ -78,10 +78,10 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
+    @space = @booking.space
     authorize @booking
-    @booking.update(booking_params)
-    @user = current_user
-    redirect_to user_bookings_path(@user)
+    @booking.destroy
+    redirect_to space_bookings_path(@space)
   end
 
   private
