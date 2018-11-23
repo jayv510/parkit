@@ -56,7 +56,8 @@ Space.create(
   description: "Lovely little parking spot",
   address: "People's Square, Shanghai",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960874/Blue_Disc_Parking_Area_Markings_Blue_Paint.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -64,7 +65,8 @@ Space.create(
   description: "Tallest building in Shanghai!",
   address: "Shanghai World Financial Center",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960856/1392104905_IMG_2060.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -72,7 +74,8 @@ Space.create(
   description: "Safe and secure parking spot",
   address: "Hunan Road, Shanghai",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960855/private-garage-with-parking-spaces-in-calatrava.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -80,7 +83,8 @@ Space.create(
   address: "Jing'an Kerry Center",
   description: "For those who love shopping",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960854/Try-This-Furthest-Spot.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -88,7 +92,8 @@ Space.create(
   description: "Adorable little parking space",
   address: "Four Seasons Hotel Shanghai",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960854/PAY-Parking-Space.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -96,7 +101,8 @@ Space.create(
   description: "Convenient parking spot",
   address: "Xintiandi, Shanghai",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960853/private-garage-with-parking-spaces-in-calatrava_1.jpg")
 
 
 
@@ -106,7 +112,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Expo 2010",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960852/p1381.0.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -114,7 +121,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Jin Mao Tower",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960852/Obama039s-EPA-spent-690000-on-parking-spots-no-one-used.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -122,7 +130,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Jing'an Temple",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960852/Obama039s-EPA-spent-690000-on-parking-spots-no-one-used.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -130,7 +139,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "People's Park, Shanghai",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960851/parking_space_ottawa.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -138,7 +148,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Shanghai Zoo",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960851/A05557_1.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -146,7 +157,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Tianzifang",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960850/Hotel-Cannes-de-Paris-garage-41-1024x576--1093279554.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -154,7 +166,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Yuyuan Garden",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960850/1307_2068_DSC_5186.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -162,7 +175,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Century Park",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960850/o.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -170,7 +184,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Hongqiao Airport Terminal 1",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960849/2-off-street-parking-spaces-on-private-drive-to-rent-near-high-barnet-tube-station-16477693-1_800X600.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -178,7 +193,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Qufu Road",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960849/2015-03-27-19.39.37.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -186,7 +202,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Shanghai Jiatong University",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960849/korea-car-parkingv2.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -194,7 +211,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Dashijie",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960848/56e69343332a2.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -202,7 +220,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Changping Road",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960848/la-na-nn-parking-auction-20130614-001.jpg")
 
 Space.create(
   user_id: user_id_sample.sample,
@@ -210,7 +229,8 @@ Space.create(
   description: "Great place to park near #{Faker::Address.community}",
   address: "Shanghai Circus World",
   half_hour_rate: rate.sample,
-  availability: true)
+  availability: true,
+  remote_photo_url: "https://res.cloudinary.com/dsvnlo5ja/image/upload/v1542960848/111-01-kulag-30012017-5-c02-93.jpg")
 
 # BOOKINGS
 

@@ -24,15 +24,15 @@ margin-left: 25px;
 .card {
  background-color: #000000;
  background-size: contain;
+ background-position: center;
  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
  color: #FFFFFF;
  font-family: 'Open Sans', Arial, sans-serif;
  font-size: 15px;
  line-height: 1.6em;
  margin: 10px;
- max-height: 200px;
- max-width: 250px;
- min-width: 210px;
+ height: 200px;
+ width: 250px;
  overflow: hidden;
  position: relative;
  text-align: left;
