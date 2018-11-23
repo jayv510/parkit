@@ -30,18 +30,17 @@
 
 </div>
 
-  <!-- Need to include images eventually -->
 
-  <!-- Need to add link to booking once route is known -->
+<div class = "links">
+  <% if policy(@space).edit? %>
+    <%= link_to "Edit listing", edit_space_path(@space) %>
+  <% end %>
+  <% if policy(@space).destroy? %>
+    <%= link_to space_path(@space),
+    method: :delete,
+    data: {confirm: "Are you sure?"} do %>
+    <p>Delete this listing</p>
+    <% end %>
+  <% end %>
+</div>
 
-  <!-- Or create a div with 'class=btn btn-primary' nested within link_to -->
- <div class = "links">
-  <p><%= link_to "Edit listing", edit_space_path(@space) %></p>
-  <p><%= link_to space_path(@space),
-        method: :delete,
-        data: {confirm: "Are you sure?"} do %>
-        <p>Delete this listing</p>
-        <% end %></p>
-        </div>
-
- <!-- <div id="map"><%= cl_image_tag("map.jpg") %></div> -->
