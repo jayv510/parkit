@@ -73,20 +73,6 @@
     </div>
   </div>
 
-<div id = "kl">
-<% if policy(@booking).edit? %>
-  <%= link_to "Edit booking", edit_booking_path(@booking), class: "btn-park" %>
-<% end %>
-<div id = "sa"></div>
-<% if policy(@booking).destroy? %>
-  <%= button_to booking_path(@booking), class: "btn-park",
-    method: :delete,
-    data: {confirm: "Are you sure?"} do %>
-      <p id = "more">Remove this booking</p>
-  <% end %>
-<% end %>
-</div>
-
 
 <!-- Bookings I've MADE -->
 
