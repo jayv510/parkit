@@ -1,9 +1,11 @@
 <%= render 'shared/navbar_two' %>
+
+
 <div class="content">
 
   <div class="card-container">
    <div class="row">
-    <div class="col-xs-6 col-md-4" >
+    <div class="col-xs-6 col-md-4" id = "ou" >
       <div id = "single">
         <h1> <%= @space.title %> </h1>
         <p> <%= @space.address %></p>
@@ -31,15 +33,16 @@
 </div>
 
 
-<div class = "links">
+<div class = "links_four">
   <% if policy(@space).edit? %>
-    <%= link_to "Edit listing", edit_space_path(@space) %>
+    <%= link_to "Edit listing", edit_space_path(@space), class: "btn-park" %>
   <% end %>
+  <div id = "sa"></div>
   <% if policy(@space).destroy? %>
-    <%= link_to space_path(@space),
+    <%= button_to space_path(@space), class: "btn-park",
     method: :delete,
     data: {confirm: "Are you sure?"} do %>
-    <p>Delete this listing</p>
+    <p id = "more">Delete this listing</p>
     <% end %>
   <% end %>
 </div>

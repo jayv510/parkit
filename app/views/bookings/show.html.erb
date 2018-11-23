@@ -63,6 +63,29 @@
       </div>
 
 
+    </div>
+  </div>
+    <div id="map"
+     style="width: 100%;
+     height: 600px; margin-top: 20px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+
+<div id = "kl">
+<% if policy(@booking).edit? %>
+  <%= link_to "Edit booking", edit_booking_path(@booking), class: "btn-park" %>
+<% end %>
+<div id = "sa"></div>
+<% if policy(@booking).destroy? %>
+  <%= button_to booking_path(@booking), class: "btn-park",
+    method: :delete,
+    data: {confirm: "Are you sure?"} do %>
+      <p id = "more">Remove this booking</p>
+  <% end %>
+<% end %>
+</div>
 
 
 <!-- Bookings I've MADE -->
