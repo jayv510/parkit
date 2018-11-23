@@ -1,45 +1,67 @@
 <!-- conditional logic or Pundit? -->
-<%= render 'shared/navbar_two' %>
+  <%= render 'shared/navbar_two' %>
 
-<h1 class="bk-show-h1">Booking Details</h1>
+  <h1 class="bk-show-h1">Booking Details</h1>
 
-  <div class="content">
+      <div class="content">
 
-    <div class="card-container">
-     <div class="row">
-      <div class="col-xs-6 col-md-4" >
+        <div class="card-container">
+         <div class="row">
+          <div class="col-xs-6 col-md-4" >
 
-        <div id = "single">
-          <h2> <%= @space.title %> </h2>
-          <p> <%= @space.address %></p>
-          <p> <%= @space.description %></p>
+            <div id = "single">
+              <h2> <%= @space.title %> </h2>
+              <p> <%= @space.address %></p>
+              <p> <%= @space.description %></p>
 
 
-          <h3>Time</h3>
-            <p>From: <%=@booking.start_datetime.strftime('%A %b %e')%> at <%= @booking.start_datetime.strftime('%R')%></p>
-            <p>To: <%=@booking.end_datetime.strftime('%A %b %e')%> at <%= @booking.end_datetime.strftime('%R')%></p>
+              <h3>Time</h3>
+                <p>From: <%=@booking.start_datetime.strftime('%A %b %e')%> at <%= @booking.start_datetime.strftime('%R')%></p>
+                <p>To: <%=@booking.end_datetime.strftime('%A %b %e')%> at <%= @booking.end_datetime.strftime('%R')%></p>
 
-              <% if @booking.user == current_user %>
-                <h3>Owner of the space </h3>
-                <p><%= @booking.space.user.first_name %> <%= @booking.space.user.last_name %></p>
+                  <% if @booking.user == current_user %>
+                    <h3>Owner of the space </h3>
+                    <p><%= @booking.space.user.first_name %> <%= @booking.space.user.last_name %></p>
 
-              <% elsif @booking.space.user == current_user %>
-                <h3>Person who booked </h3>
-                <p> <%= @booking.user.first_name %> <%= @booking.user.last_name %></p>
-              <% end %>
+                  <% elsif @booking.space.user == current_user %>
+                    <h3>Person who booked </h3>
+                    <p> <%= @booking.user.first_name %> <%= @booking.user.last_name %></p>
+                  <% end %>
 
-            <h3>Cost</h3>
-            <p> Spent: ¥<%= @booking.total_price %></p>
-            <p id = "bu" ><%= @space.half_hour_rate %> RMB / 30 mins</p>
+                <h3>Cost</h3>
+                <p> Spent: ¥<%= @booking.total_price %></p>
+                <p id = "bu" ><%= @space.half_hour_rate %> RMB / 30 mins</p>
 
-            <p> by <%= @booking.user.first_name %> <%= @booking.user.last_name %> </p>
+                <p> by <%= @booking.user.first_name %> <%= @booking.user.last_name %> </p>
 
-          <div class="show-image"><%= cl_image_tag @space.photo, height: 280, width: 280, crop: :fill %></div>
+              <div class="show-image"><%= cl_image_tag @space.photo, height: 280, width: 280, crop: :fill %></div>
 
+  <br>
+  <% if policy(@booking).edit? %>
+    <%= link_to "Edit booking", edit_booking_path(@booking) %>
+  <% end %>
+  <% if policy(@booking).destroy? %>
+    <%= link_to booking_path(@booking),
+      method: :delete,
+      data: {confirm: "Are you sure?"} do %>
+        <p>Remove this booking</p>
+    <% end %>
+  <% end %>
+
+            </div>
+
+          </div>
 
         </div>
-
       </div>
+        <div id="map"
+         style="width: 100%;
+         height: 600px; margin-top: 20px;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+
 
     </div>
   </div>
