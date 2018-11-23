@@ -29,7 +29,8 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.status = "pending"
 
-    @booking.total_price = ( (@booking.end_datetime - @booking.start_datetime) / 3600 * 2 ) * @booking.space.half_hour_rate
+    @booking_length = (@booking.end_datetime - @booking.start_datetime) / 3600 * 2
+    @booking.total_price = ( @booking_length * @booking.space.half_hour_rate )
 
     if @booking.save
       # redirect_to space_booking_path(@booking)
@@ -64,7 +65,14 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     authorize @booking
+
     @booking.update(booking_params)
+
+    @booking_length = (@booking.end_datetime - @booking.start_datetime) / 3600 * 2
+    @booking.total_price = ( @booking_length * @booking.space.half_hour_rate )
+
+    @booking.save
+
     redirect_to booking_path(@booking)
   end
 
