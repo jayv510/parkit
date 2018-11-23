@@ -17,20 +17,28 @@
 }
 
 .form {
-  width: 320px;
+  background-color: transparent;
+  width: 30vw;
   height: 200px;
   padding: 35px;
   border-radius: 2px;
-  background-color: white;
   display:flex;
-  margin-top: 260px;
-  margin-left: -100px;
+  align-items: center;
+  margin-left: 33vw;
+  margin-top: 30px;
   color: #D36656;
   -webkit-box-shadow: 5px 5px 41px -6px #000000;
-box-shadow: 5px 5px 41px -6px #000000;
+  box-shadow: 5px 5px 41px -6px #000000;
 }
 
-.form { transition: all .2s ease-in-out; }
+#space_address {
+  width: 25vw;
+}
+.whole {
+  display:flex;
+  align-items: center;
+}
+.form { transition: all .4s ease-in-out; }
 
 .form:hover { transform: scale(1.3); }
 

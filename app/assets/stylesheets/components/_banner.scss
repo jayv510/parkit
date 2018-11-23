@@ -1,10 +1,19 @@
 .home-banner {
   background-size: cover;
-  background-position: right;
+  background-position: center;
   opacity: 0.9;
   height: 100vh;
-  width: 75vw;
+  width: 100vw;
   text-align: center;
-  color: black;
-  margin-left: 25vw;
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+#po {
+  margin-top: 150px;
+  font-size: 90px;
+  color: #FFFFFF;
+
+
 }
